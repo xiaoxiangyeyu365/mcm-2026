@@ -1,154 +1,113 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.model_selection import KFold
-import warnings
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+import joblib  # 用于保存模型
 
-warnings.filterwarnings('ignore')
-
-# ==========================================
-# 1. 数据加载与辅助函数
-# ==========================================
-# 请确保此时使用的是上一模块生成的 'cleaned_dwts_data.csv'
-DATA_PATH = 'cleaned_dwts_data.csv'
-df = pd.read_csv(DATA_PATH)
+# 设置绘图风格
+plt.style.use('seaborn-v0_8-whitegrid')
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
 
-def get_scoring_method(season):
-    """根据赛季返回计分规则"""
-    if season <= 2: return 'rank'
-    if season <= 27: return 'percent'
-    return 'rank_save'  # S28+ 引入评委拯救
+def train_scoring_model(file_path):
+    """
+    加载清洗后的数据，训练随机森林回归模型，并输出评估结果。
+    """
+    print("--------------------------------------------------")
+    print("Step 1: 数据输入与特征矩阵构建")
+    print("--------------------------------------------------")
+
+    try:
+        df = pd.read_csv(file_path)
+        print(f"数据加载成功，样本量: {df.shape[0]}, 特征数: {df.shape[1]}")
+    except FileNotFoundError:
+        print("错误：未找到文件，请检查路径。")
+        return None, None, None
+
+    # 1.1 特征选择 (X)
+    # 排除非数值列和目标列。保留 'week', 'judge_count', 'age' 和所有 'ind_' 开头的职业特征
+    feature_cols = ['week', 'judge_count', 'celebrity_age_during_season'] + \
+                   [col for col in df.columns if col.startswith('ind_')]
+
+    X = df[feature_cols]
+
+    # 1.2 目标变量 (y)
+    # 使用平均分作为预测目标，消除评委人数不同带来的偏差
+    y = df['avg_score']
+
+    # 检查并处理可能的缺失值 (尽管已预处理，但在建模前做最终防御)
+    if X.isnull().sum().sum() > 0:
+        print("警告：特征矩阵中发现缺失值，将填充为0或均值。")
+        X = X.fillna(0)
+
+    print(f"特征矩阵构建完成。特征维度: {X.shape}")
+
+    # 1.3 数据集划分
+    # random_state=42 保证结果可复现 (论文写作必须)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    print("\n--------------------------------------------------")
+    print("Step 2: 模型初始化与参数调优 (GridSearchCV)")
+    print("--------------------------------------------------")
+
+    # 初始化模型
+    rf = RandomForestRegressor(random_state=42, n_jobs=-1)
+
+    # 定义超参数网格
+    # n_estimators: 树的数量，越多越稳但越慢
+    # max_depth: 树的深度，限制深度防止过拟合
+    param_grid = {
+        'n_estimators': [100, 200],
+        'max_depth': [10, 20, None],
+        'min_samples_split': [2, 5]
+    }
+
+    print("开始网格搜索 (Grid Search)... 这可能需要几秒钟...")
+    # cv=5 表示5折交叉验证，是美赛中验证模型稳健性的标准操作
+    grid_search = GridSearchCV(estimator=rf, param_grid=param_grid, cv=5, scoring='neg_mean_squared_error', n_jobs=-1)
+    grid_search.fit(X_train, y_train)
+
+    best_model = grid_search.best_estimator_
+    print(f"最佳参数组合: {grid_search.best_params_}")
+
+    print("\n--------------------------------------------------")
+    print("Step 3: 模型训练与结果预测")
+    print("--------------------------------------------------")
+
+    # 使用最佳模型进行预测
+    y_pred_train = best_model.predict(X_train)
+    y_pred_test = best_model.predict(X_test)
+
+    # 评估指标
+    mse = mean_squared_error(y_test, y_pred_test)
+    r2 = r2_score(y_test, y_pred_test)
+    mae = mean_absolute_error(y_test, y_pred_test)
+
+    print(f"测试集 MSE (均方误差): {mse:.4f}")
+    print(f"测试集 R² (拟合优度): {r2:.4f} (越接近1越好)")
+    print(f"测试集 MAE (平均绝对误差): {mae:.4f}")
+
+    # 保存模型 (模拟实际工程操作)
+    joblib.dump(best_model, 'dwts_rf_model.pkl')
+    print("模型已保存为 'dwts_rf_model.pkl'")
+
+    return best_model, X_train.columns, (y_test, y_pred_test)
 
 
-# ==========================================
-# 2. Q1: 观众票数反演 (MCMC/Rejection Sampling)
-# ==========================================
-print("正在执行 Q1: 观众票数蒙特卡洛反演...")
+# --- 执行主程序 ---
+if __name__ == "__main__":
+    # 这里的路径对应你上传的文件名
+    file_path = 'cleaned_dwts_data.csv'
+    model, feature_names, results = train_scoring_model(file_path)
 
-estimated_votes = []
-np.random.seed(2026)  # 固定随机种子以复现结果
-
-# 按周遍历进行反演
-for (season, week), week_data in df.groupby(['season', 'week']):
-    if len(week_data) <= 1: continue  # 决赛或异常数据跳过
-
-    contestants = week_data['celebrity_name'].values
-    judge_scores = week_data['avg_score'].values
-    n_contestants = len(contestants)
-
-    # 识别本周被淘汰者
-    # 注意：需解析 results 字段，这里简化逻辑：若 results 包含 "Week X" 且 X==week
-    elim_mask = week_data['results'].astype(str).str.contains(f"Week {week}", regex=False).values
-    has_elimination = any(elim_mask)
-
-    valid_samples = []
-    max_iter = 500  # 模拟次数
-
-    for _ in range(max_iter):
-        # 1. 随机生成观众票比例 (Dirichlet分布保证和为1)
-        fan_shares = np.random.dirichlet(np.ones(n_contestants) * 2.0)
-
-        # 2. 计算综合得分
-        method = get_scoring_method(season)
-        total_score = np.zeros(n_contestants)
-
-        if 'rank' in method:
-            # 排名制: 分数越高 -> Rank数值越小 (1st)。总分 = Judge_Rank + Fan_Rank
-            # 注意: argsort两次得到排名 (0-based)
-            j_rank = np.argsort(np.argsort(-judge_scores))  # 降序排，分高Rank小
-            f_rank = np.argsort(np.argsort(-fan_shares))
-            total_score = j_rank + f_rank  # 数值越小越好
-
-            # 淘汰判定: Rank和 最大者被淘汰
-            sim_elim_idx = np.argmax(total_score)
-
-        else:  # percent
-            # 百分比制: (Judge% + Fan%) / 2
-            j_pct = judge_scores / (np.sum(judge_scores) + 1e-9)
-            total_score = (j_pct + fan_shares) * 50
-            # 淘汰判定: 总分 最小者被淘汰
-            sim_elim_idx = np.argmin(total_score)
-
-        # 3. 验证是否符合历史事实
-        if has_elimination:
-            actual_elim_idx = np.where(elim_mask)[0][0]
-
-            # 宽松验证: 模拟的淘汰者 是 真实淘汰者 (或在 Rank制下处于 Bottom 2)
-            # 考虑到模拟的随机性，放宽到 Bottom 2 以保证有解
-            if 'rank' in method:
-                bottom_2 = np.argsort(total_score)[-2:]  # Rank和最大的两人
-                if actual_elim_idx in bottom_2:
-                    valid_samples.append(fan_shares)
-            else:
-                bottom_2 = np.argsort(total_score)[:2]  # 分数最小的两人
-                if actual_elim_idx in bottom_2:
-                    valid_samples.append(fan_shares)
-        else:
-            valid_samples.append(fan_shares)
-
-    # 聚合结果
-    if valid_samples:
-        avg_shares = np.mean(valid_samples, axis=0)
-    else:
-        # 若无可行解，假设均匀分布但给予淘汰者惩罚 (Fallback)
-        avg_shares = np.ones(n_contestants) / n_contestants
-        if has_elimination:
-            avg_shares[np.where(elim_mask)[0][0]] *= 0.8
-            avg_shares /= avg_shares.sum()
-
-    for i, name in enumerate(contestants):
-        estimated_votes.append({
-            'season': season,
-            'week': week,
-            'celebrity_name': name,
-            'est_fan_share': avg_shares[i]
-        })
-
-# 合并反演结果
-est_df = pd.DataFrame(estimated_votes)
-full_df = pd.merge(df, est_df, on=['season', 'week', 'celebrity_name'], how='left')
-full_df['est_fan_share'] = full_df['est_fan_share'].fillna(0.1)  # 填充缺失
-print("Q1 完成。估算数据已合并。")
-
-# ==========================================
-# 3. Q2: 赛制对比 (Counterfactual Simulation)
-# ==========================================
-# 简单计算：若所有赛季都用 百分比制，结果差异多大？
-# 计算 "Score Gap"：评委分占比 - 观众分占比
-full_df['score_gap'] = (full_df['avg_score'] / 10) - (full_df['est_fan_share'] * 10)
-# 注: est_fan_share是单周占比，需乘以系数调整量纲对比
-
-# ==========================================
-# 4. Q4: 驱动因素分析 (Random Forest)
-# ==========================================
-print("正在执行 Q4: 随机森林归因分析...")
-
-# 特征准备: 年龄 + 评委分 + 行业Dummy
-ind_cols = [c for c in full_df.columns if c.startswith('ind_')]
-feature_cols = ['celebrity_age_during_season', 'avg_score'] + ind_cols
-
-# 剔除无法训练的行
-model_data = full_df.dropna(subset=feature_cols + ['est_fan_share'])
-
-X = model_data[feature_cols]
-y = model_data['est_fan_share']
-
-# 模型训练
-rf = RandomForestRegressor(n_estimators=100, max_depth=6, random_state=42)
-rf.fit(X, y)
-
-# 提取特征重要性
-importances = rf.feature_importances_
-feature_imp_df = pd.DataFrame({'Feature': feature_cols, 'Importance': importances})
-feature_imp_df = feature_imp_df.sort_values(by='Importance', ascending=False)
-
-print("\n=== 影响观众票数的 Top 5 因素 ===")
-print(feature_imp_df.head(5))
-
-# ==========================================
-# 5. 保存结果用于可视化
-# ==========================================
-full_df.to_csv('solved_dwts_results.csv', index=False)
-print("\n结果已保存至 'solved_dwts_results.csv'")
+    if model:
+        # 简单打印一下最重要的3个特征，详细图表见可视化部分
+        importances = model.feature_importances_
+        indices = np.argsort(importances)[::-1]
+        print("\n[关键结论] 影响评分的前三位因素:")
+        for i in range(3):
+            print(f"{i + 1}. {feature_names[indices[i]]} (权重: {importances[indices[i]]:.4f})")

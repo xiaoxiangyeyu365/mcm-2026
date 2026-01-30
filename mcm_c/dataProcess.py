@@ -1,110 +1,201 @@
+# =============================================
+# 数据预处理代码（2026 MCM Problem C）
+# 作者：MCM参赛团队
+# 核心功能：数据清洗、特征工程、可视化分析、数据保存
+# =============================================
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.decomposition import PCA
+from sklearn.model_selection import train_test_split
 import seaborn as sns
-import os
 
-# ==========================================
-# 1. 路径配置
-# ==========================================
-INPUT_PATH = '2026_MCM_Problem_C_Data.csv'
-OUTPUT_DIR = 'processed_data/'
-if not os.path.exists(OUTPUT_DIR):
-    os.makedirs(OUTPUT_DIR)
+# --------------------------
+# 1. 数据加载（请替换为你的本地路径）
+# --------------------------
+DATA_PATH = "2026_MCM_Problem_C_Data.csv"  # 原始数据路径
+OUTPUT_PATH = "processed_data\\cleaned_dwts_data.csv"          # 处理后数据输出路径
+df = pd.read_csv(DATA_PATH, encoding='utf-8')
 
-print(f"正在读取数据: {INPUT_PATH}...")
-df = pd.read_csv(INPUT_PATH)
+# --------------------------
+# 2. 预处理前可视化分析（必须做：验证数据问题）
+# --------------------------
+plt.rcParams['font.sans-serif'] = ['Arial']
+fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+fig.suptitle('Data Preprocessing - Before Cleaning', fontsize=16, fontweight='bold')
 
-# ==========================================
-# 2. 数据清洗与重构 (Wide to Long)
-# ==========================================
-# 2.1 处理 N/A 值
-df.replace(['N/A', 'NA', 'nan', ' '], np.nan, inplace=True) # 增加对空字符串的处理
+# 2.1 缺失值热力图
+missing_data = df.isnull().sum().sort_values(ascending=False)[:10]  # 前10个缺失字段
+axes[0,0].barh(range(len(missing_data)), missing_data.values, color='#3498db')
+axes[0,0].set_yticks(range(len(missing_data)))
+axes[0,0].set_yticklabels(missing_data.index)
+axes[0,0].set_xlabel('Missing Values Count')
+axes[0,0].set_title('Top 10 Missing Fields')
 
-# 2.2 转换宽表为长表 (Melt)
-score_cols = [c for c in df.columns if 'judge' in c]
-meta_cols = [c for c in df.columns if c not in score_cols]
+# 2.2 评委分数分布（以week1为例）
+week1_scores = df[['week1_judge1_score', 'week1_judge2_score', 'week1_judge3_score']].values.flatten()
+week1_scores = week1_scores[~np.isnan(week1_scores)]  # 剔除NaN
+axes[0,1].hist(week1_scores, bins=20, color='#e74c3c', alpha=0.7, edgecolor='black')
+axes[0,1].set_xlabel('Judge Score')
+axes[0,1].set_ylabel('Frequency')
+axes[0,1].set_title('Week 1 Judge Scores Distribution')
 
-df_long = pd.melt(df, id_vars=meta_cols, value_vars=score_cols,
-                  var_name='week_judge_str', value_name='raw_score')
+# 2.3 选手行业分布
+industry_counts = df['celebrity_industry'].value_counts()
+axes[1,0].pie(industry_counts.values, labels=industry_counts.index, autopct='%1.1f%%',
+               colors=sns.color_palette('Set3'), startangle=90)
+axes[1,0].set_title('Celebrity Industry Distribution')
 
-# 2.3 解析 'week_judge_str'
-df_long['week'] = df_long['week_judge_str'].str.extract(r'week(\d+)_').astype(float).astype('Int64') # 安全转换为Int
-df_long['judge'] = df_long['week_judge_str'].str.extract(r'judge(\d+)_').astype(float).astype('Int64')
-
-# 2.4 类型转换
-df_long['raw_score'] = pd.to_numeric(df_long['raw_score'], errors='coerce')
-
-# ==========================================
-# 3. 特征工程 (修复核心逻辑)
-# ==========================================
-# 3.1 聚合计算
-# 注意：这里我们过滤掉 raw_score 为 0 的行，因为那通常意味着没跳舞
-df_long_valid = df_long[df_long['raw_score'] > 0].copy()
-
-df_weekly = df_long_valid.groupby(['season', 'celebrity_name', 'week'])['raw_score'].agg(
-    total_score='sum',
-    judge_count='count',
-    avg_score='mean',
-    score_std='std'
-).reset_index()
-
-# 3.2 合并元数据
-meta_df = df[meta_cols].drop_duplicates(subset=['season', 'celebrity_name'])
-final_df = pd.merge(df_weekly, meta_df, on=['season', 'celebrity_name'], how='left')
-
-# 3.3 行业 One-Hot 编码
-final_df = pd.get_dummies(final_df, columns=['celebrity_industry'], prefix='ind', dummy_na=True)
-
-# ==========================================
-# 4. 可视化分析模块 (异常修复版)
-# ==========================================
-# 设置更美观的绘图风格
-sns.set_theme(style="whitegrid", context="paper", font_scale=1.2)
-
-# 【关键修复】：创建专门用于绘图的数据集，严格剔除 0 分
-# 真实比赛最低分通常是 1-4 分，0 分绝对是未参赛数据
-plot_df = final_df[final_df['avg_score'] > 0].copy()
-
-plt.figure(figsize=(14, 6))
-
-# 图1: 评分分布 (Histogram)
-# 修复点：移除了0值干扰，添加了平均线，颜色更柔和
-plt.subplot(1, 2, 1)
-sns.histplot(plot_df['avg_score'], bins=20, kde=True, color='#3498db', edgecolor='white')
-plt.axvline(plot_df['avg_score'].mean(), color='red', linestyle='--', label=f"Mean: {plot_df['avg_score'].mean():.2f}")
-plt.title('Distribution of Valid Dance Scores (1-10 Scale)', fontsize=14, fontweight='bold')
-plt.xlabel('Average Judge Score')
-plt.ylabel('Frequency')
-plt.legend()
-
-# 图2: 评委人数与分数的箱线图 (Boxplot)
-# 修复点：将 judge_count 设为分类变量，避免X轴错乱；过滤掉极少数非标准评委数(如1或2人)
-valid_judge_counts = plot_df[plot_df['judge_count'].isin([3, 4])]
-
-plt.subplot(1, 2, 2)
-sns.boxplot(x='judge_count', y='avg_score', data=valid_judge_counts, palette="Set2", width=0.5)
-plt.title('Score Distribution by Panel Size (3 vs 4 Judges)', fontsize=14, fontweight='bold')
-plt.xlabel('Number of Judges')
-plt.ylabel('Average Score')
-# 添加抖动点显示实际数据密度
-sns.stripplot(x='judge_count', y='avg_score', data=valid_judge_counts,
-              size=2, color=".3", alpha=0.4, jitter=True)
+# 2.4 异常值检测（箱线图）
+valid_scores = []
+for col in df.columns:
+    if 'judge' in col and 'score' in col:
+        valid_scores.extend(df[col].dropna().values)
+axes[1,1].boxplot(valid_scores, patch_artist=True, boxprops=dict(facecolor='#2ecc71'))
+axes[1,1].set_ylabel('Judge Score')
+axes[1,1].set_title('Judge Scores Boxplot (Outlier Detection)')
+axes[1,1].set_ylim(0, 12)  # 限定范围，突出异常值
 
 plt.tight_layout()
-save_path = os.path.join(OUTPUT_DIR, 'preprocessing_quality_check_fixed.png')
-plt.savefig(save_path, dpi=300)
-print(f"修复后的可视化图表已保存至: {save_path}")
+plt.savefig('preprocessing_before.png', dpi=300, bbox_inches='tight')
+plt.show()
 
-# ==========================================
-# 5. 数据保存
-# ==========================================
-output_file = os.path.join(OUTPUT_DIR, 'cleaned_dwts_data.csv')
-final_df.to_csv(output_file, index=False)
+# --------------------------
+# 3. 数据清洗（核心步骤）
+# --------------------------
+# 3.1 缺失值处理
+# 第4评委分数填充
+judge_cols = ['week{}_judge{}_score'.format(w, j) for w in range(1,12) for j in range(1,5)]
+for w in range(1,12):
+    week_judge_cols = ['week{}_judge{}_score'.format(w, j) for j in range(1,5)]
+    df[week_judge_cols] = df[week_judge_cols].fillna(df[week_judge_cols].mean(axis=1), axis=0)
 
-print("="*50)
-print(f"处理完成! 数据已保存至: {output_file}")
-print(f"清洗后数据行数: {final_df.shape[0]}")
-print("前5行预览 (Valid Scores Only):")
-print(final_df[['season', 'celebrity_name', 'week', 'avg_score', 'judge_count']].head())
-print("="*50)
+# 基础字段缺失填充
+df['celebrity_homestate'] = df['celebrity_homestate'].fillna('Unknown')
+df['celebrity_homecountry/region'] = df['celebrity_homecountry/region'].fillna('Unknown')
+
+# 3.2 特殊值（0分）处理
+df['is_eliminated'] = 0
+for idx, row in df.iterrows():
+    if 'Eliminated Week' in row['results']:
+        eliminate_week = int(row['results'].split(' ')[-1])
+        current_week = int(row['week'] if 'week' in row else 0)  # 需根据数据结构调整week提取逻辑
+        if current_week > eliminate_week:
+            df.loc[idx, 'is_eliminated'] = 1
+
+# 3.3 异常值处理（IQR法）
+valid_scores = []
+for col in judge_cols:
+    valid_scores.extend(df[col].dropna().values)
+Q1 = np.percentile(valid_scores, 25)
+Q3 = np.percentile(valid_scores, 75)
+IQR = Q3 - Q1
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+
+# 修正异常值
+for col in judge_cols:
+    df[col] = np.where(df[col] < lower_bound, 1.0, df[col])
+    df[col] = np.where(df[col] > upper_bound, 10.0, df[col])
+
+# --------------------------
+# 4. 特征工程
+# --------------------------
+# 4.1 衍生特征
+# 每周总得分（均值）
+for w in range(1,12):
+    week_judge_cols = ['week{}_judge{}_score'.format(w, j) for j in range(1,5)]
+    df[f'week{w}_total_score'] = df[week_judge_cols].mean(axis=1)
+
+# 每周评分标准差
+for w in range(1,12):
+    week_judge_cols = ['week{}_judge{}_score'.format(w, j) for j in range(1,5)]
+    df[f'week{w}_score_std'] = df[week_judge_cols].std(axis=1)
+
+# 年龄分组
+df['age_group'] = pd.cut(df['celebrity_age_during_season'], bins=[0,25,40,100], labels=['<25', '25-40', '>40'])
+
+# 国家二值编码
+df['is_usa'] = (df['celebrity_homecountry/region'] == 'United States').astype(int)
+
+# 4.2 分类型特征One-Hot编码
+cat_features = ['celebrity_industry', 'ballroom_partner', 'age_group']
+encoder = OneHotEncoder(sparse_output=False, drop='first')
+cat_encoded = encoder.fit_transform(df[cat_features])
+cat_df = pd.DataFrame(cat_encoded, columns=encoder.get_feature_names_out(cat_features))
+
+# 4.3 数值特征标准化
+num_features = ['celebrity_age_during_season', 'week1_total_score', 'week1_score_std']  # 可扩展其他周特征
+scaler = StandardScaler()
+df[num_features] = scaler.fit_transform(df[num_features])
+
+# 4.4 合并特征（核心建模数据集）
+model_df = pd.concat([df[['season', 'is_eliminated', 'is_usa'] + num_features], cat_df], axis=1)
+
+# --------------------------
+# 5. 数据划分
+# --------------------------
+X = model_df.drop('is_eliminated', axis=1)  # 示例：以淘汰状态为目标变量，可根据建模需求替换
+y = model_df['is_eliminated']
+X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.3, random_state=42, stratify=df['season'])
+X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=1/3, random_state=42)
+
+# --------------------------
+# 6. 预处理后可视化分析
+# --------------------------
+fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+fig.suptitle('Data Preprocessing - After Cleaning', fontsize=16, fontweight='bold')
+
+# 6.1 清洗后评分分布
+cleaned_scores = df['week1_total_score'].dropna()
+axes[0,0].hist(cleaned_scores, bins=20, color='#9b59b6', alpha=0.7, edgecolor='black')
+axes[0,0].set_xlabel('Week 1 Total Score')
+axes[0,0].set_ylabel('Frequency')
+axes[0,0].set_title('Cleaned Total Score Distribution')
+
+# 6.2 训练/验证/测试集分布
+dataset_labels = ['Train', 'Validation', 'Test']
+dataset_sizes = [len(X_train), len(X_val), len(X_test)]
+axes[0,1].bar(dataset_labels, dataset_sizes, color=['#3498db', '#e67e22', '#2ecc71'], alpha=0.8)
+axes[0,1].set_ylabel('Sample Count')
+axes[0,1].set_title('Train/Validation/Test Split')
+for i, v in enumerate(dataset_sizes):
+    axes[0,1].text(i, v+2, str(v), ha='center', fontweight='bold')
+
+# 6.3 年龄分组分布
+age_group_counts = df['age_group'].value_counts()
+axes[1,0].bar(age_group_counts.index, age_group_counts.values, color='#f39c12', alpha=0.7)
+axes[1,0].set_xlabel('Age Group')
+axes[1,0].set_ylabel('Count')
+axes[1,0].set_title('Celebrity Age Group Distribution (After Processing)')
+
+# 6.4 特征相关性热力图（前10个核心特征）
+corr_matrix = model_df.iloc[:, :10].corr()
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt='.2f', ax=axes[1,1])
+axes[1,1].set_title('Core Features Correlation Heatmap')
+
+plt.tight_layout()
+plt.savefig('preprocessing_after.png', dpi=300, bbox_inches='tight')
+plt.show()
+
+# --------------------------
+# 7. 数据保存（通用格式）
+# --------------------------
+# 保存完整处理后数据（CSV格式）
+model_df.to_csv(OUTPUT_PATH, index=False, encoding='utf-8')
+
+# 保存训练/验证/测试集（CSV格式）
+train_df = pd.concat([X_train, y_train.reset_index(drop=True)], axis=1)
+val_df = pd.concat([X_val, y_val.reset_index(drop=True)], axis=1)
+test_df = pd.concat([X_test, y_test.reset_index(drop=True)], axis=1)
+
+train_df.to_csv('train_data.csv', index=False, encoding='utf-8')
+val_df.to_csv('val_data.csv', index=False, encoding='utf-8')
+test_df.to_csv('test_data.csv', index=False, encoding='utf-8')
+
+# Matlab格式保存（可选）
+# from scipy.io import savemat
+# savemat('processed_data.mat', {'model_df': model_df.values, 'feature_names': model_df.columns})
+
+print("数据预处理完成！文件保存至：", OUTPUT_PATH)
