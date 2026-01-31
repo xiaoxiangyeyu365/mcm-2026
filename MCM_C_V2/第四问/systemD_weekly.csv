@@ -1,0 +1,336 @@
+﻿season,week,n,actual_eliminated,pred_pct50,elim_systemD,protected_systemD,risk_pool,risk_pool_size
+1,1,6,,Kelly Monaco,Kelly Monaco,John O'Hurley,Kelly Monaco;Trista Sutter;Evander Holyfield;John O'Hurley,4
+1,2,6,Trista Sutter,Trista Sutter,Kelly Monaco,Evander Holyfield,Evander Holyfield;Kelly Monaco;Trista Sutter;Joey McIntyre,4
+1,3,5,Evander Holyfield,Evander Holyfield,Evander Holyfield,Rachel Hunter,Evander Holyfield;Kelly Monaco;Joey McIntyre;Rachel Hunter,4
+1,4,4,Rachel Hunter,Rachel Hunter,Joey McIntyre,John O'Hurley,Joey McIntyre;Rachel Hunter;John O'Hurley;Kelly Monaco,4
+1,5,3,,Joey McIntyre,John O'Hurley,Joey McIntyre,Joey McIntyre;John O'Hurley;Kelly Monaco,3
+1,6,2,,John O'Hurley,Kelly Monaco,John O'Hurley,John O'Hurley;Kelly Monaco,2
+2,1,10,Kenny Mayne,Kenny Mayne,Master P,Lisa Rinna,Master P;Kenny Mayne;George Hamilton;Lisa Rinna,4
+2,2,9,Tatum O'Neal,Tatum O'Neal,Tatum O'Neal,Giselle Fernandez,Tatum O'Neal;Master P;Lisa Rinna;Giselle Fernandez,4
+2,3,8,Giselle Fernandez,Giselle Fernandez,Master P,Giselle Fernandez,Master P;Giselle Fernandez;Jerry Rice;George Hamilton,4
+2,4,7,Master P,Master P,Master P,Jerry Rice,Master P;George Hamilton;Tia Carrere;Jerry Rice,4
+2,5,6,Tia Carrere,Tia Carrere,Tia Carrere,George Hamilton,Tia Carrere;George Hamilton;Jerry Rice;Lisa Rinna,4
+2,6,5,George Hamilton,George Hamilton,Jerry Rice,George Hamilton,George Hamilton;Jerry Rice;Lisa Rinna;Stacy Keibler,4
+2,7,4,Lisa Rinna,Lisa Rinna,Lisa Rinna,Jerry Rice,Jerry Rice;Lisa Rinna;Stacy Keibler;Drew Lachey,4
+2,8,3,,Jerry Rice,Stacy Keibler,Jerry Rice,Jerry Rice;Stacy Keibler;Drew Lachey,3
+3,1,11,Tucker Carlson,Tucker Carlson,Tucker Carlson,Shanna Moakler,Tucker Carlson;Sara Evans;Shanna Moakler;Harry Hamlin,4
+3,2,10,Shanna Moakler,Shanna Moakler,Harry Hamlin,Jerry Springer,Harry Hamlin;Jerry Springer;Sara Evans;Shanna Moakler,4
+3,3,9,Harry Hamlin,Harry Hamlin,Emmitt Smith,Harry Hamlin,Emmitt Smith;Harry Hamlin;Jerry Springer;Willa Ford,4
+3,4,8,Vivica A. Fox,Vivica A. Fox,Sara Evans,Vivica A. Fox,Sara Evans;Vivica A. Fox;Jerry Springer;Monique Coleman,4
+3,5,7,Willa Ford,Willa Ford,Jerry Springer,Willa Ford,Jerry Springer;Willa Ford;Monique Coleman;Joey Lawrence,4
+3,6,5,,Jerry Springer,Jerry Springer,Emmitt Smith,Jerry Springer;Monique Coleman;Joey Lawrence;Emmitt Smith,4
+3,7,5,Jerry Springer,Jerry Springer,Jerry Springer,Emmitt Smith,Jerry Springer;Monique Coleman;Mario Lopez;Emmitt Smith,4
+3,8,4,Monique Coleman,Monique Coleman,Monique Coleman,Emmitt Smith,Monique Coleman;Emmitt Smith;Joey Lawrence;Mario Lopez,4
+3,9,3,,Emmitt Smith,Mario Lopez,Emmitt Smith,Emmitt Smith;Mario Lopez;Joey Lawrence,3
+3,10,2,,Emmitt Smith,Mario Lopez,Emmitt Smith,Emmitt Smith;Mario Lopez,2
+4,1,11,,Billy Ray Cyrus,Billy Ray Cyrus,Paulina Porizkova,Billy Ray Cyrus;Leeza Gibbons;Clyde Drexler;Paulina Porizkova,4
+4,2,11,Paulina Porizkova,Paulina Porizkova,Clyde Drexler,Paulina Porizkova,Clyde Drexler;Shandi Finnessey;Paulina Porizkova;Billy Ray Cyrus,4
+4,3,10,Shandi Finnessey,Shandi Finnessey,Clyde Drexler,Shandi Finnessey,Clyde Drexler;John Ratzenberger;Shandi Finnessey;Billy Ray Cyrus,4
+4,4,9,Leeza Gibbons,Leeza Gibbons,Leeza Gibbons,Clyde Drexler,Leeza Gibbons;Clyde Drexler;John Ratzenberger;Billy Ray Cyrus,4
+4,5,8,Clyde Drexler,Clyde Drexler,Clyde Drexler,Billy Ray Cyrus,Clyde Drexler;Billy Ray Cyrus;Heather Mills;John Ratzenberger,4
+4,6,7,Heather Mills,Heather Mills,John Ratzenberger,Heather Mills,John Ratzenberger;Heather Mills;Billy Ray Cyrus;Ian Ziering,4
+4,7,6,John Ratzenberger,John Ratzenberger,Billy Ray Cyrus,Laila Ali,Billy Ray Cyrus;John Ratzenberger;Laila Ali;Ian Ziering,4
+4,8,5,Billy Ray Cyrus,Billy Ray Cyrus,Ian Ziering,Billy Ray Cyrus,Billy Ray Cyrus;Ian Ziering;Laila Ali;Joey Fatone,4
+4,9,4,Ian Ziering,Ian Ziering,Ian Ziering,Joey Fatone,Ian Ziering;Apolo Anton Ohno;Joey Fatone;Laila Ali,4
+4,10,3,,Laila Ali,Laila Ali,Apolo Anton Ohno,Laila Ali;Apolo Anton Ohno;Joey Fatone,3
+5,1,12,Josie Maran,Josie Maran,Josie Maran,Albert Reed,Josie Maran;Floyd Mayweather Jr. ;Albert Reed;Jennie Garth,4
+5,2,11,Albert Reed,Albert Reed,Wayne Newton,Albert Reed,Wayne Newton;Albert Reed;Mark Cuban;Jennie Garth,4
+5,3,10,Wayne Newton,Wayne Newton,Wayne Newton,Helio Castroneves,Wayne Newton;Mark Cuban;Floyd Mayweather Jr. ;Helio Castroneves,4
+5,4,9,Floyd Mayweather Jr. ,Floyd Mayweather Jr. ,Floyd Mayweather Jr. ,Mel B,Floyd Mayweather Jr. ;Mark Cuban;Marie Osmond;Mel B,4
+5,5,8,Mark Cuban,Mark Cuban,Mark Cuban,Jane Seymour,Mark Cuban;Marie Osmond;Helio Castroneves;Jane Seymour,4
+5,6,7,Sabrina Bryan,Sabrina Bryan,Jane Seymour,Sabrina Bryan,Jane Seymour;Sabrina Bryan;Marie Osmond;Cameron Mathison,4
+5,7,6,Jane Seymour,Jane Seymour,Jane Seymour,Jennie Garth,Jane Seymour;Cameron Mathison;Helio Castroneves;Jennie Garth,4
+5,8,5,Cameron Mathison,Cameron Mathison,Marie Osmond,Cameron Mathison,Marie Osmond;Cameron Mathison;Jennie Garth;Helio Castroneves,4
+5,9,4,Jennie Garth,Jennie Garth,Marie Osmond,Jennie Garth,Jennie Garth;Marie Osmond;Helio Castroneves;Mel B,4
+5,10,3,,Marie Osmond,Marie Osmond,Helio Castroneves,Marie Osmond;Helio Castroneves;Mel B,3
+6,1,12,,Penn Jillette,Monica Seles,Penn Jillette,Monica Seles;Penn Jillette;Adam Carolla;Steve Guttenberg,4
+6,2,12,Monica Seles,Monica Seles,Monica Seles,Penn Jillette,Monica Seles;Penn Jillette;Steve Guttenberg;Adam Carolla,4
+6,3,10,Steve Guttenberg,Steve Guttenberg,Steve Guttenberg,Marissa Jaret Winokur,Steve Guttenberg;Marlee Matlin;Marissa Jaret Winokur;Adam Carolla,4
+6,4,9,Adam Carolla,Adam Carolla,Adam Carolla,Marlee Matlin,Adam Carolla;Priscilla Presley;Marlee Matlin;Marissa Jaret Winokur,4
+6,5,8,Priscilla Presley,Priscilla Presley,Priscilla Presley,Marissa Jaret Winokur,Priscilla Presley;Marlee Matlin;Cristian de la Fuente;Marissa Jaret Winokur,4
+6,6,7,Marlee Matlin,Marlee Matlin,Marlee Matlin,Marissa Jaret Winokur,Marlee Matlin;Shannon Elizabeth;Jason Taylor;Marissa Jaret Winokur,4
+6,7,6,Shannon Elizabeth,Shannon Elizabeth,Shannon Elizabeth,Cristian de la Fuente,Shannon Elizabeth;Cristian de la Fuente;Mario;Marissa Jaret Winokur,4
+6,8,5,Mario,Mario,Marissa Jaret Winokur,Mario,Marissa Jaret Winokur;Mario;Jason Taylor;Cristian de la Fuente,4
+6,9,4,Marissa Jaret Winokur,Marissa Jaret Winokur,Jason Taylor,Marissa Jaret Winokur,Marissa Jaret Winokur;Jason Taylor;Cristian de la Fuente;Kristi Yamaguchi,4
+6,10,3,,Cristian de la Fuente,Cristian de la Fuente,Kristi Yamaguchi,Cristian de la Fuente;Kristi Yamaguchi;Jason Taylor,3
+7,1,13,Jeffrey Ross,Jeffrey Ross,Jeffrey Ross,Ted McGinley,Jeffrey Ross;Rocco DiSpirito;Ted McGinley;Kim Kardashian,4
+7,2,11,Kim Kardashian,Kim Kardashian,Kim Kardashian,Cloris Leachman,Kim Kardashian;Rocco DiSpirito;Cloris Leachman;Maurice Greene,4
+7,3,9,,Cloris Leachman,Cloris Leachman,Rocco DiSpirito,Cloris Leachman;Susan Lucci;Cody Linley;Rocco DiSpirito,4
+7,4,9,Rocco DiSpirito,Rocco DiSpirito,Rocco DiSpirito,Cloris Leachman,Rocco DiSpirito;Maurice Greene;Cloris Leachman;Toni Braxton,4
+7,5,8,Toni Braxton,Toni Braxton,Cloris Leachman,Toni Braxton,Cloris Leachman;Toni Braxton;Lance Bass;Susan Lucci,4
+7,6,7,Cloris Leachman,Cloris Leachman,Cloris Leachman,Brooke Burke,Cloris Leachman;Maurice Greene;Susan Lucci;Brooke Burke,4
+7,7,6,Susan Lucci,Susan Lucci,Warren Sapp,Susan Lucci,Warren Sapp;Susan Lucci;Cody Linley;Maurice Greene,4
+7,8,5,Maurice Greene,Maurice Greene,Cody Linley,Maurice Greene,Maurice Greene;Cody Linley;Lance Bass;Warren Sapp,4
+7,9,4,Cody Linley,Cody Linley,Cody Linley,Warren Sapp,Cody Linley;Warren Sapp;Brooke Burke;Lance Bass,4
+7,10,3,,Warren Sapp,Warren Sapp,Brooke Burke,Warren Sapp;Brooke Burke;Lance Bass,3
+8,1,13,,Steve Wozniak,Steve Wozniak,Ty Murray,Steve Wozniak;Lawrence Taylor;Ty Murray;Belinda Carlisle,4
+8,2,13,Belinda Carlisle,Belinda Carlisle,Steve-O,Belinda Carlisle,Steve-O;David Alan Grier;Belinda Carlisle;Steve Wozniak,4
+8,3,12,Denise Richards,Steve Wozniak,Steve Wozniak,Denise Richards,Steve Wozniak;Denise Richards;Steve-O;Holly Madison,4
+8,4,11,Holly Madison,Steve Wozniak,Steve Wozniak,Holly Madison,Steve Wozniak;Holly Madison;Steve-O;Lawrence Taylor,4
+8,5,9,David Alan Grier,David Alan Grier,Steve-O,David Alan Grier,Steve-O;David Alan Grier;Lawrence Taylor;Ty Murray,4
+8,6,8,Steve-O,Steve-O,Steve-O,Chuck Wicks,Steve-O;Ty Murray;Lawrence Taylor;Chuck Wicks,4
+8,7,7,Lawrence Taylor,Lawrence Taylor,Lawrence Taylor,Lil' Kim,Lawrence Taylor;Ty Murray;Lil' Kim;Chuck Wicks,4
+8,8,6,Chuck Wicks,Chuck Wicks,Chuck Wicks,Shawn Johnson,Chuck Wicks;Melissa Rycroft;Ty Murray;Shawn Johnson,4
+8,9,5,Lil' Kim,Lil' Kim,Lil' Kim,Gilles Marini,Lil' Kim;Ty Murray;Shawn Johnson;Gilles Marini,4
+8,10,4,Ty Murray,Ty Murray,Melissa Rycroft,Ty Murray,Ty Murray;Melissa Rycroft;Shawn Johnson;Gilles Marini,4
+8,11,3,,Melissa Rycroft,Melissa Rycroft,Shawn Johnson,Melissa Rycroft;Shawn Johnson;Gilles Marini,3
+9,1,16,Ashley Hamiliton,Ashley Hamiliton,Macy Gray,Ashley Hamiliton,Ashley Hamiliton;Macy Gray;Michael Irvin;Kathy Ireland,4
+9,2,14,Kathy Ireland,Kathy Ireland,Kathy Ireland,Joanna Krupa,Kathy Ireland;Tom DeLay;Chuck Liddell;Joanna Krupa,4
+9,3,13,Debi Mazar,Debi Mazar,Michael Irvin,Debi Mazar,Michael Irvin;Debi Mazar;Chuck Liddell;Tom DeLay,4
+9,4,11,Chuck Liddell,Chuck Liddell,Michael Irvin,Chuck Liddell,Michael Irvin;Chuck Liddell;Louie Vito;Aaron Carter,4
+9,5,10,Natalie Coughlin,Natalie Coughlin,Michael Irvin,Natalie Coughlin,Michael Irvin;Natalie Coughlin;Louie Vito;Joanna Krupa,4
+9,6,9,Louie Vito,Melissa Joan Hart,Melissa Joan Hart,Michael Irvin,Melissa Joan Hart;Michael Irvin;Louie Vito;Kelly Osbourne,4
+9,7,7,Mark Dacascos,Mark Dacascos,Mark Dacascos,Michael Irvin,Michael Irvin;Mark Dacascos;Mya;Kelly Osbourne,4
+9,8,5,Aaron Carter,Aaron Carter,Donny Osmond,Aaron Carter,Aaron Carter;Donny Osmond;Kelly Osbourne;Joanna Krupa,4
+9,9,4,Joanna Krupa,Joanna Krupa,Joanna Krupa,Donny Osmond,Donny Osmond;Joanna Krupa;Kelly Osbourne;Mya,4
+9,10,3,,Kelly Osbourne,Mya,Kelly Osbourne,Kelly Osbourne;Mya;Donny Osmond,3
+10,1,11,,Buzz Aldrin,Buzz Aldrin,Shannen Doherty,Buzz Aldrin;Aiden Turner;Shannen Doherty;Chad Ochocinco,4
+10,2,11,Shannen Doherty,Buzz Aldrin,Buzz Aldrin,Shannen Doherty,Buzz Aldrin;Kate Gosselin;Shannen Doherty;Chad Ochocinco,4
+10,3,10,Buzz Aldrin,Buzz Aldrin,Buzz Aldrin,Jake Pavelka,Buzz Aldrin;Kate Gosselin;Jake Pavelka;Pamela Anderson,4
+10,4,9,Aiden Turner,Aiden Turner,Aiden Turner,Niecy Nash,Aiden Turner;Kate Gosselin;Jake Pavelka;Niecy Nash,4
+10,5,8,Kate Gosselin,Kate Gosselin,Kate Gosselin,Pamela Anderson,Kate Gosselin;Niecy Nash;Pamela Anderson;Chad Ochocinco,4
+10,6,7,Jake Pavelka,Jake Pavelka,Niecy Nash,Jake Pavelka,Jake Pavelka;Niecy Nash;Evan Lysacek;Pamela Anderson,4
+10,7,6,Pamela Anderson,Pamela Anderson,Niecy Nash,Pamela Anderson,Niecy Nash;Pamela Anderson;Erin Andrews;Chad Ochocinco,4
+10,8,5,Niecy Nash,Niecy Nash,Niecy Nash,Erin Andrews,Niecy Nash;Chad Ochocinco;Evan Lysacek;Erin Andrews,4
+10,9,4,Chad Ochocinco,Chad Ochocinco,Chad Ochocinco,Nicole Scherzinger,Chad Ochocinco;Erin Andrews;Nicole Scherzinger;Evan Lysacek,4
+10,10,3,,Evan Lysacek,Evan Lysacek,Erin Andrews,Evan Lysacek;Erin Andrews;Nicole Scherzinger,3
+11,1,12,David Hasselhoff,David Hasselhoff,Margaret Cho,David Hasselhoff,David Hasselhoff;Margaret Cho;The Situation;Michael Bolton,4
+11,2,11,Michael Bolton,Michael Bolton,Michael Bolton,The Situation,Michael Bolton;Margaret Cho;The Situation;Florence Henderson,4
+11,3,10,Margaret Cho,Margaret Cho,Margaret Cho,Bristol Palin,Margaret Cho;Florence Henderson;Bristol Palin;The Situation,4
+11,4,9,The Situation,The Situation,Bristol Palin,The Situation,The Situation;Bristol Palin;Kurt Warner;Florence Henderson,4
+11,5,8,Florence Henderson,Florence Henderson,Bristol Palin,Florence Henderson,Bristol Palin;Florence Henderson;Kyle Massey;Audrina Patridge,4
+11,6,7,Audrina Patridge,Audrina Patridge,Kurt Warner,Audrina Patridge,Kurt Warner;Jennifer Grey;Bristol Palin;Audrina Patridge,4
+11,7,6,Rick Fox,Rick Fox,Bristol Palin,Rick Fox,Bristol Palin;Rick Fox;Kyle Massey;Kurt Warner,4
+11,8,5,Kurt Warner,Kurt Warner,Kurt Warner,Bristol Palin,Bristol Palin;Kurt Warner;Kyle Massey;Jennifer Grey,4
+11,9,4,Brandy,Brandy,Bristol Palin,Brandy,Brandy;Bristol Palin;Kyle Massey;Jennifer Grey,4
+11,10,3,,Bristol Palin,Kyle Massey,Bristol Palin,Bristol Palin;Kyle Massey;Jennifer Grey,3
+12,1,11,,Mike Catherwood,Mike Catherwood,Petra Nemcova,Mike Catherwood;Wendy Williams;Sugar Ray Leonard;Petra Nemcova,4
+12,2,11,Mike Catherwood,Mike Catherwood,Mike Catherwood,Wendy Williams,Mike Catherwood;Sugar Ray Leonard;Wendy Williams;Petra Nemcova,4
+12,3,10,Wendy Williams,Wendy Williams,Wendy Williams,Romeo,Wendy Williams;Sugar Ray Leonard;Romeo;Ralph Macchio,4
+12,4,9,Sugar Ray Leonard,Sugar Ray Leonard,Kendra Wilkinson,Petra Nemcova,Kendra Wilkinson;Sugar Ray Leonard;Kirstie Alley;Petra Nemcova,4
+12,5,8,Petra Nemcova,Petra Nemcova,Ralph Macchio,Petra Nemcova,Petra Nemcova;Ralph Macchio;Kendra Wilkinson;Kirstie Alley,4
+12,6,7,Chris Jericho,Chris Jericho,Chris Jericho,Romeo,Chris Jericho;Kendra Wilkinson;Ralph Macchio;Romeo,4
+12,7,6,Kendra Wilkinson,Kendra Wilkinson,Kirstie Alley,Kendra Wilkinson,Kirstie Alley;Kendra Wilkinson;Romeo;Chelsea Kane,4
+12,8,5,Romeo,Romeo,Romeo,Ralph Macchio,Ralph Macchio;Romeo;Kirstie Alley;Hines Ward,4
+12,9,4,Ralph Macchio,Ralph Macchio,Kirstie Alley,Ralph Macchio,Ralph Macchio;Kirstie Alley;Hines Ward;Chelsea Kane,4
+12,10,3,,Kirstie Alley,Kirstie Alley,Chelsea Kane,Kirstie Alley;Chelsea Kane;Hines Ward,3
+13,1,12,Metta World Peace (Ron),Metta World Peace (Ron),Metta World Peace (Ron),Kristin Cavallari,Metta World Peace (Ron);Elisabetta Canalis;Nancy Grace;Kristin Cavallari,4
+13,2,11,Elisabetta Canalis,Elisabetta Canalis,Carson Kressley,Chaz Bono,Carson Kressley;Chaz Bono;Hope Solo;David Arquette,4
+13,3,10,Kristin Cavallari,Chaz Bono,Chaz Bono,Kristin Cavallari,Chaz Bono;Nancy Grace;Kristin Cavallari;Carson Kressley,4
+13,4,9,Chynna Phillips,Chynna Phillips,Carson Kressley,Chynna Phillips,Carson Kressley;Chynna Phillips;Nancy Grace;Chaz Bono,4
+13,5,8,Carson Kressley,Carson Kressley,Carson Kressley,Chaz Bono,Carson Kressley;Chaz Bono;Nancy Grace;Ricki Lake,4
+13,6,7,Chaz Bono,Chaz Bono,Chaz Bono,Rob Kardashian,Chaz Bono;Hope Solo;David Arquette;Rob Kardashian,4
+13,7,6,David Arquette,David Arquette,David Arquette,Nancy Grace,David Arquette;Nancy Grace;J.R. Martinez;Hope Solo,4
+13,8,5,Nancy Grace,Nancy Grace,Nancy Grace,Ricki Lake,Nancy Grace;Rob Kardashian;Ricki Lake;Hope Solo,4
+13,9,4,Hope Solo,Hope Solo,J.R. Martinez,Hope Solo,Hope Solo;J.R. Martinez;Rob Kardashian;Ricki Lake,4
+13,10,3,,Ricki Lake,Ricki Lake,J.R. Martinez,Ricki Lake;J.R. Martinez;Rob Kardashian,3
+14,1,12,,Gavin DeGraw,Gavin DeGraw,Jack Wagner,Gavin DeGraw;Martina Navratilova;Melissa Gilbert;Jack Wagner,4
+14,2,12,Martina Navratilova,Martina Navratilova,Martina Navratilova,Jack Wagner,Martina Navratilova;Gladys Knight;Jack Wagner;Melissa Gilbert,4
+14,3,11,Jack Wagner,Jack Wagner,Sherri Sheperd,Jack Wagner,Jack Wagner;Sherri Sheperd;Gavin DeGraw;Melissa Gilbert,4
+14,4,10,Sherri Sheperd,Sherri Sheperd,Gladys Knight,Katherine Jenkins,Gladys Knight;Sherri Sheperd;Melissa Gilbert;Katherine Jenkins,4
+14,5,9,Gavin DeGraw,Gavin DeGraw,Gavin DeGraw,Gladys Knight,Gavin DeGraw;Gladys Knight;Melissa Gilbert;Jaleel White,4
+14,6,8,Gladys Knight,Gladys Knight,Gladys Knight,Maria Menounos,Gladys Knight;Roshon Fegan;Melissa Gilbert;Maria Menounos,4
+14,7,7,Jaleel White,Jaleel White,Melissa Gilbert,Jaleel White,Jaleel White;Melissa Gilbert;Roshon Fegan;Donald Driver,4
+14,8,6,Melissa Gilbert,Melissa Gilbert,Melissa Gilbert,Roshon Fegan,Melissa Gilbert;Maria Menounos;Roshon Fegan;Katherine Jenkins,4
+14,9,4,Maria Menounos,Maria Menounos,Donald Driver,Maria Menounos,Donald Driver;Katherine Jenkins;Maria Menounos;William Levy,4
+14,10,3,,Donald Driver,Donald Driver,William Levy,Donald Driver;William Levy;Katherine Jenkins,3
+15,1,13,Pamela Anderson,Pamela Anderson,Pamela Anderson,Helio Castroneves,Pamela Anderson;Kirstie Alley;Joey Fatone;Helio Castroneves,4
+15,2,12,Joey Fatone,Joey Fatone,Bristol Palin,Joey Fatone,Bristol Palin;Joey Fatone;Drew Lachey;Kelly Monaco,4
+15,3,11,Drew Lachey,Drew Lachey,Drew Lachey,Helio Castroneves,Drew Lachey;Bristol Palin;Helio Castroneves;Emmitt Smith,4
+15,4,9,Bristol Palin,Bristol Palin,Bristol Palin,Kelly Monaco,Bristol Palin;Kirstie Alley;Apolo Anton Ohno;Kelly Monaco,4
+15,5,8,,Kelly Monaco,Kelly Monaco,Sabrina Bryan,Kelly Monaco;Kirstie Alley;Melissa Rycroft;Sabrina Bryan,4
+15,6,8,Sabrina Bryan,Sabrina Bryan,Emmitt Smith,Sabrina Bryan,Emmitt Smith;Gilles Marini;Kirstie Alley;Sabrina Bryan,4
+15,7,7,,Kirstie Alley,Kirstie Alley,Apolo Anton Ohno,Kirstie Alley;Gilles Marini;Apolo Anton Ohno;Emmitt Smith,4
+15,8,7,Gilles Marini,Kirstie Alley,Kirstie Alley,Gilles Marini,Kirstie Alley;Gilles Marini;Emmitt Smith;Kelly Monaco,4
+15,9,5,Apolo Anton Ohno,Emmitt Smith,Emmitt Smith,Kelly Monaco,Emmitt Smith;Apolo Anton Ohno;Kelly Monaco;Melissa Rycroft,4
+15,10,3,,Shawn Johnson,Shawn Johnson,Kelly Monaco,Shawn Johnson;Kelly Monaco;Melissa Rycroft,3
+16,1,12,,D. L. Hughley,D. L. Hughley,Andy Dick,D. L. Hughley;Victor Ortiz;Lisa Vanderpump;Andy Dick,4
+16,2,12,,Dorothy Hamill,Dorothy Hamill,Victor Ortiz,Dorothy Hamill;D. L. Hughley;Victor Ortiz;Wynonna Judd,4
+16,3,11,Wynonna Judd,Wynonna Judd,Wynonna Judd,Lisa Vanderpump,Wynonna Judd;D. L. Hughley;Andy Dick;Lisa Vanderpump,4
+16,4,10,Lisa Vanderpump,Lisa Vanderpump,Lisa Vanderpump,D. L. Hughley,Lisa Vanderpump;Victor Ortiz;Sean Lowe;D. L. Hughley,4
+16,5,9,D. L. Hughley,D. L. Hughley,Andy Dick,D. L. Hughley,D. L. Hughley;Andy Dick;Ingo Rademacher;Victor Ortiz,4
+16,6,8,Victor Ortiz,Victor Ortiz,Victor Ortiz,Jacoby Jones,Victor Ortiz;Andy Dick;Sean Lowe;Jacoby Jones,4
+16,7,7,Andy Dick,Andy Dick,Andy Dick,Jacoby Jones,Andy Dick;Sean Lowe;Ingo Rademacher;Jacoby Jones,4
+16,8,6,Sean Lowe,Sean Lowe,Ingo Rademacher,Sean Lowe,Sean Lowe;Ingo Rademacher;Jacoby Jones;Alexandra Raisman,4
+16,9,5,Ingo Rademacher,Ingo Rademacher,Ingo Rademacher,Zendaya,Ingo Rademacher;Kellie Pickler;Zendaya;Jacoby Jones,4
+16,10,4,Alexandra Raisman,Alexandra Raisman,Jacoby Jones,Alexandra Raisman,Alexandra Raisman;Jacoby Jones;Kellie Pickler;Zendaya,4
+17,1,12,,Bill Nye,Bill Nye,Christina Milian,Bill Nye;Keyshawn Johnson;Bill Engvall;Christina Milian,4
+17,2,12,Keyshawn Johnson,Keyshawn Johnson,Keyshawn Johnson,Bill Nye,"Bill Nye;Keyshawn Johnson;Valerie Harper;Nicole ""Snooki"" Polizzi",4
+17,3,11,Bill Nye,Bill Nye,Valerie Harper,Bill Nye,Bill Nye;Valerie Harper;Jack Osbourne;Leah Remini,4
+17,4,10,Valerie Harper,Valerie Harper,Valerie Harper,Christina Milian,Valerie Harper;Brant Daugherty;Bill Engvall;Christina Milian,4
+17,5,9,Christina Milian,Christina Milian,Leah Remini,Christina Milian,Leah Remini;Bill Engvall;Elizabeth Berkley Lauren;Christina Milian,4
+17,6,8,,Bill Engvall,Bill Engvall,Leah Remini,"Bill Engvall;Jack Osbourne;Leah Remini;Nicole ""Snooki"" Polizzi",4
+17,7,8,"Nicole ""Snooki"" Polizzi","Nicole ""Snooki"" Polizzi",Bill Engvall,"Nicole ""Snooki"" Polizzi","Bill Engvall;Leah Remini;Nicole ""Snooki"" Polizzi;Elizabeth Berkley Lauren",4
+17,8,7,Brant Daugherty,Brant Daugherty,Bill Engvall,Brant Daugherty,Bill Engvall;Brant Daugherty;Elizabeth Berkley Lauren;Leah Remini,4
+17,9,6,Elizabeth Berkley Lauren,Elizabeth Berkley Lauren,Bill Engvall,Elizabeth Berkley Lauren,Bill Engvall;Elizabeth Berkley Lauren;Amber Riley;Leah Remini,4
+17,10,5,Leah Remini,Leah Remini,Leah Remini,Bill Engvall,Bill Engvall;Leah Remini;Jack Osbourne;Amber Riley,4
+17,11,4,Bill Engvall,Bill Engvall,Jack Osbourne,Bill Engvall,Bill Engvall;Jack Osbourne;Corbin Bleu;Amber Riley,4
+18,1,12,,Billy Dee Williams,Billy Dee Williams,Sean Avery,Billy Dee Williams;Diana Nyad;Sean Avery;James Maslow,4
+18,2,11,Sean Avery,Billy Dee Williams,Billy Dee Williams,Sean Avery,Billy Dee Williams;Sean Avery;NeNe Leakes;Candace Cameron Bure,4
+18,3,9,,NeNe Leakes,Drew Carey,Danica McKellar,Drew Carey;NeNe Leakes;Candace Cameron Bure;Danica McKellar,4
+18,4,9,,Cody Simpson,Candace Cameron Bure,Drew Carey,Candace Cameron Bure;Cody Simpson;Drew Carey;NeNe Leakes,4
+18,5,9,Cody Simpson,Cody Simpson,Cody Simpson,Candace Cameron Bure,Cody Simpson;Drew Carey;Candace Cameron Bure;NeNe Leakes,4
+18,6,8,Drew Carey,Drew Carey,Drew Carey,James Maslow,Drew Carey;Candace Cameron Bure;NeNe Leakes;James Maslow,4
+18,7,7,NeNe Leakes,NeNe Leakes,NeNe Leakes,Charlie White,NeNe Leakes;James Maslow;Danica McKellar;Charlie White,4
+18,8,6,Danica McKellar,Danica McKellar,James Maslow,Danica McKellar,James Maslow;Danica McKellar;Candace Cameron Bure;Meryl Davis,4
+18,9,5,Charlie White,Charlie White,Charlie White,Candace Cameron Bure,Charlie White;Candace Cameron Bure;James Maslow;Amy Purdy,4
+18,10,4,James Maslow,James Maslow,James Maslow,Candace Cameron Bure,Candace Cameron Bure;James Maslow;Amy Purdy;Meryl Davis,4
+19,1,13,Lolo Jones,Lolo Jones,Lolo Jones,Betsey Johnson,Lolo Jones;Betsey Johnson;Antonio Sabato Jr.;Michael Waltrip,4
+19,2,12,Tavis Smiley,Tavis Smiley,Michael Waltrip,Tavis Smiley,Michael Waltrip;Tavis Smiley;Randy Couture;Betsey Johnson,4
+19,3,11,Randy Couture,Randy Couture,Randy Couture,Betsey Johnson,Randy Couture;Michael Waltrip;Betsey Johnson;Lea Thompson,4
+19,4,10,Betsey Johnson,Betsey Johnson,Jonathan Bennett,Betsey Johnson,Jonathan Bennett;Betsey Johnson;Antonio Sabato Jr.;Michael Waltrip,4
+19,5,9,,Michael Waltrip,Michael Waltrip,Jonathan Bennett,Michael Waltrip;Jonathan Bennett;Tommy Chong;Antonio Sabato Jr.,4
+19,6,9,Jonathan Bennett,Jonathan Bennett,Antonio Sabato Jr.,Jonathan Bennett,Antonio Sabato Jr.;Jonathan Bennett;Michael Waltrip;Lea Thompson,4
+19,7,8,Antonio Sabato Jr.,Antonio Sabato Jr.,Antonio Sabato Jr.,Michael Waltrip,Antonio Sabato Jr.;Michael Waltrip;Tommy Chong;Sadie Robertson,4
+19,8,7,Michael Waltrip,Michael Waltrip,Michael Waltrip,Lea Thompson,Michael Waltrip;Lea Thompson;Tommy Chong;Sadie Robertson,4
+19,9,6,Lea Thompson,Lea Thompson,Lea Thompson,Janel Parrish,Lea Thompson;Tommy Chong;Sadie Robertson;Janel Parrish,4
+19,10,5,Tommy Chong,Tommy Chong,Tommy Chong,Sadie Robertson,Tommy Chong;Alfonso Ribeiro;Sadie Robertson;Bethany Mota,4
+19,11,4,Bethany Mota,Bethany Mota,Bethany Mota,Alfonso Ribeiro,Bethany Mota;Janel Parrish;Alfonso Ribeiro;Sadie Robertson,4
+20,1,12,,Charlotte McKinney,Charlotte McKinney,Willow Shields,Charlotte McKinney;Redfoo;Willow Shields;Chris Soules,4
+20,2,12,Redfoo,Chris Soules,Charlotte McKinney,Redfoo,Charlotte McKinney;Chris Soules;Redfoo;Robert Herjavec,4
+20,3,11,Charlotte McKinney,Charlotte McKinney,Charlotte McKinney,Robert Herjavec,Charlotte McKinney;Patti LaBelle;Michael Sam;Robert Herjavec,4
+20,4,10,Michael Sam,Michael Sam,Suzanne Somers,Chris Soules,Suzanne Somers;Michael Sam;Chris Soules;Patti LaBelle,4
+20,5,9,Suzanne Somers,Suzanne Somers,Robert Herjavec,Suzanne Somers,Robert Herjavec;Suzanne Somers;Patti LaBelle;Chris Soules,4
+20,6,8,Patti LaBelle,Patti LaBelle,Patti LaBelle,Willow Shields,Patti LaBelle;Robert Herjavec;Willow Shields;Noah Galloway,4
+20,7,7,Willow Shields,Willow Shields,Robert Herjavec,Willow Shields,Robert Herjavec;Chris Soules;Willow Shields;Riker Lynch,4
+20,8,6,Chris Soules,Robert Herjavec,Robert Herjavec,Chris Soules,Robert Herjavec;Chris Soules;Noah Galloway;Nastia Liukin,4
+20,9,4,Nastia Liukin,Nastia Liukin,Noah Galloway,Nastia Liukin,Noah Galloway;Nastia Liukin;Riker Lynch;Rumer Willis,4
+20,10,3,,Noah Galloway,Riker Lynch,Noah Galloway,Riker Lynch;Noah Galloway;Rumer Willis,3
+21,1,13,,Kim Zolciak-Biermann,Chaka Khan,Gary Busey,Chaka Khan;Kim Zolciak-Biermann;Victor Espinoza;Gary Busey,4
+21,2,13,Chaka Khan,Chaka Khan,Chaka Khan,Gary Busey,Chaka Khan;Victor Espinoza;Paula Deen;Gary Busey,4
+21,3,10,,Paula Deen,Paula Deen,Bindi Irwin,Paula Deen;Gary Busey;Bindi Irwin;Hayes Grier,4
+21,4,10,Gary Busey,Gary Busey,Gary Busey,Alek Skarlatos,Gary Busey;Paula Deen;Alexa PenaVega;Alek Skarlatos,4
+21,5,9,,Paula Deen,Paula Deen,Andy Grammer,Paula Deen;Hayes Grier;Tamar Braxton;Andy Grammer,4
+21,6,9,Paula Deen,Paula Deen,Paula Deen,Hayes Grier,Paula Deen;Alexa PenaVega;Hayes Grier;Carlos PenaVega,4
+21,7,8,Hayes Grier,Hayes Grier,Tamar Braxton,Hayes Grier,Tamar Braxton;Alek Skarlatos;Hayes Grier;Nick Carter,4
+21,8,7,Andy Grammer,Andy Grammer,Andy Grammer,Alek Skarlatos,Andy Grammer;Alek Skarlatos;Alexa PenaVega;Tamar Braxton,4
+21,9,6,Alexa PenaVega,Alexa PenaVega,Tamar Braxton,Alexa PenaVega,Tamar Braxton;Carlos PenaVega;Alexa PenaVega;Alek Skarlatos,4
+21,10,4,,Nick Carter,Nick Carter,Carlos PenaVega,Nick Carter;Carlos PenaVega;Alek Skarlatos;Bindi Irwin,4
+21,11,4,Carlos PenaVega,Carlos PenaVega,Alek Skarlatos,Carlos PenaVega,Alek Skarlatos;Carlos PenaVega;Nick Carter;Bindi Irwin,4
+22,1,12,,Geraldo Rivera,Geraldo Rivera,Jodie Sweetin,Geraldo Rivera;Doug Flutie;Mischa Barton;Jodie Sweetin,4
+22,2,12,Geraldo Rivera,Geraldo Rivera,Geraldo Rivera,Antonio Brown,Geraldo Rivera;Mischa Barton;Kim Fields;Antonio Brown,4
+22,3,11,Mischa Barton,Mischa Barton,Mischa Barton,Von Miller,Mischa Barton;Doug Flutie;Ginger Zee;Von Miller,4
+22,4,10,Marla Maples,Marla Maples,Doug Flutie,Nyle DiMarco,Doug Flutie;Jodie Sweetin;Marla Maples;Nyle DiMarco,4
+22,5,9,,Doug Flutie,Doug Flutie,Antonio Brown,Doug Flutie;Antonio Brown;Von Miller;Kim Fields,4
+22,6,9,Doug Flutie,Doug Flutie,Doug Flutie,Nyle DiMarco,Doug Flutie;Kim Fields;Von Miller;Nyle DiMarco,4
+22,7,8,Kim Fields,Kim Fields,Kim Fields,Jodie Sweetin,Kim Fields;Jodie Sweetin;Von Miller;Antonio Brown,4
+22,8,6,Jodie Sweetin,Jodie Sweetin,Wanya Morris,Jodie Sweetin,Wanya Morris;Antonio Brown;Jodie Sweetin;Paige VanZant,4
+22,9,5,Antonio Brown,Antonio Brown,Antonio Brown,Ginger Zee,Antonio Brown;Nyle DiMarco;Ginger Zee;Wanya Morris,4
+22,10,3,,Nyle DiMarco,Nyle DiMarco,Ginger Zee,Nyle DiMarco;Ginger Zee;Paige VanZant,3
+23,1,13,,Rick Perry,Rick Perry,Vanilla Ice,Rick Perry;Jake T. Austin;Maureen McCormick;Vanilla Ice,4
+23,2,13,Jake T. Austin,Jake T. Austin,Rick Perry,Jake T. Austin,Rick Perry;Jake T. Austin;Amber Rose;Ryan Lochte,4
+23,3,12,Rick Perry,Rick Perry,Rick Perry,Amber Rose,Rick Perry;Vanilla Ice;Babyface;Amber Rose,4
+23,4,11,Babyface,Babyface,Babyface,Marilu Henner,Babyface;Marilu Henner;Vanilla Ice;Jana Kramer,4
+23,5,9,,Amber Rose,Amber Rose,Jana Kramer,Amber Rose;Maureen McCormick;Calvin Johnson Jr.;Jana Kramer,4
+23,6,9,Amber Rose,Amber Rose,Amber Rose,Terra Jole,Amber Rose;Maureen McCormick;Marilu Henner;Terra Jole,4
+23,7,8,Maureen McCormick,Maureen McCormick,Maureen McCormick,Marilu Henner,Maureen McCormick;Marilu Henner;Ryan Lochte;Jana Kramer,4
+23,8,7,Ryan Lochte,Ryan Lochte,Terra Jole,Ryan Lochte,Ryan Lochte;Terra Jole;Marilu Henner;Jana Kramer,4
+23,9,6,Marilu Henner,Marilu Henner,James Hinchcliffe,Marilu Henner,Marilu Henner;James Hinchcliffe;Calvin Johnson Jr.;Terra Jole,4
+23,10,5,Terra Jole,Terra Jole,James Hinchcliffe,Calvin Johnson Jr.,James Hinchcliffe;Terra Jole;Jana Kramer;Calvin Johnson Jr.,4
+23,11,4,Jana Kramer,Jana Kramer,Jana Kramer,James Hinchcliffe,Jana Kramer;Calvin Johnson Jr.;James Hinchcliffe;Laurie Hernandez,4
+24,1,12,,Chris Kattan,Chris Kattan,Bonner Bolton,Chris Kattan;Charo;Mr. T;Bonner Bolton,4
+24,2,12,Chris Kattan,Chris Kattan,Chris Kattan,Erika Jayne,Chris Kattan;Mr. T;Charo;Erika Jayne,4
+24,3,11,Charo,Charo,Mr. T,Charo,Charo;Mr. T;Bonner Bolton;Erika Jayne,4
+24,4,10,Mr. T,Mr. T,Mr. T,Normani,Mr. T;Erika Jayne;Nick Viall;Normani,4
+24,5,9,Erika Jayne,Erika Jayne,Erika Jayne,David Ross,Erika Jayne;Bonner Bolton;David Ross;Rashad Jennings,4
+24,6,8,Heather Morris,Heather Morris,Nick Viall,Bonner Bolton,Nick Viall;David Ross;Nancy Kerrigan;Bonner Bolton,4
+24,7,7,Nancy Kerrigan,Nick Viall,Nick Viall,Bonner Bolton,Nick Viall;Bonner Bolton;David Ross;Nancy Kerrigan,4
+24,8,5,Bonner Bolton,Bonner Bolton,David Ross,Bonner Bolton,Bonner Bolton;David Ross;Simone Biles;Rashad Jennings,4
+24,9,4,Simone Biles,Simone Biles,Normani,David Ross,Normani;David Ross;Simone Biles;Rashad Jennings,4
+24,10,3,,David Ross,Normani,David Ross,David Ross;Normani;Rashad Jennings,3
+25,1,13,,Barbara Corcoran,Barbara Corcoran,Debbie Gibson,Barbara Corcoran;Terrell Owens;Debbie Gibson;Drew Scott,4
+25,2,13,Barbara Corcoran,Barbara Corcoran,Barbara Corcoran,Debbie Gibson,Barbara Corcoran;Derek Fisher;Nick Lachey;Debbie Gibson,4
+25,3,11,,Sasha Pieterse,Sasha Pieterse,Nikki Bella,Sasha Pieterse;Nikki Bella;Derek Fisher;Nick Lachey,4
+25,4,11,Derek Fisher,Derek Fisher,Derek Fisher,Sasha Pieterse,Derek Fisher;Nick Lachey;Sasha Pieterse;Drew Scott,4
+25,5,10,Sasha Pieterse,Sasha Pieterse,Nick Lachey,Victoria Arlen,Nick Lachey;Sasha Pieterse;Vanessa Lachey;Victoria Arlen,4
+25,6,9,Nick Lachey,Nick Lachey,Nick Lachey,Victoria Arlen,Nick Lachey;Drew Scott;Victoria Arlen;Frankie Muniz,4
+25,7,8,Nikki Bella,Nikki Bella,Nikki Bella,Lindsey Stirling,Nikki Bella;Terrell Owens;Vanessa Lachey;Lindsey Stirling,4
+25,8,6,Terrell Owens,Terrell Owens,Drew Scott,Terrell Owens,Drew Scott;Terrell Owens;Victoria Arlen;Frankie Muniz,4
+25,9,5,Victoria Arlen,Victoria Arlen,Drew Scott,Victoria Arlen,Drew Scott;Victoria Arlen;Frankie Muniz;Jordan Fisher,4
+25,10,4,Drew Scott,Drew Scott,Drew Scott,Jordan Fisher,Drew Scott;Frankie Muniz;Jordan Fisher;Lindsey Stirling,4
+26,1,10,Jamie Anderson,Johnny Damon,Johnny Damon,Kareem Abdul-Jabbar,Johnny Damon;Kareem Abdul-Jabbar;Jamie Anderson;Arike Ogunbowale,4
+26,2,8,Arike Ogunbowale,Kareem Abdul-Jabbar,Kareem Abdul-Jabbar,Arike Ogunbowale,Kareem Abdul-Jabbar;Jennie Finch Daigle;Josh Norman;Arike Ogunbowale,4
+26,3,6,Chris Mazdzer,Jennie Finch Daigle,Jennie Finch Daigle,Mirai Nagasu,Jennie Finch Daigle;Chris Mazdzer;Mirai Nagasu;Tonya Harding,4
+26,4,3,,Tonya Harding,Tonya Harding,Adam Rippon,Tonya Harding;Adam Rippon;Josh Norman,3
+27,1,13,Nikki Glaser,Nikki Glaser,Nikki Glaser,Joe Amabile,Nikki Glaser;Joe Amabile;Evanna Lynch;Danelle Umstead,4
+27,2,12,Danelle Umstead,Danelle Umstead,Danelle Umstead,Joe Amabile,Danelle Umstead;Bobby Bones;Joe Amabile;Nancy McKeon,4
+27,3,11,Nancy McKeon,Nancy McKeon,Joe Amabile,Nancy McKeon,Joe Amabile;Nancy McKeon;John Schneider;Bobby Bones,4
+27,4,10,Tinashe,Joe Amabile,Joe Amabile,Tinashe,Joe Amabile;Bobby Bones;John Schneider;Tinashe,4
+27,5,9,,Joe Amabile,Joe Amabile,Bobby Bones,Joe Amabile;John Schneider;Evanna Lynch;Bobby Bones,4
+27,6,9,Mary Lou Retton,Mary Lou Retton,John Schneider,Mary Lou Retton,John Schneider;Mary Lou Retton;Bobby Bones;Joe Amabile,4
+27,7,8,DeMarcus Ware,DeMarcus Ware,DeMarcus Ware,Joe Amabile,DeMarcus Ware;Joe Amabile;Bobby Bones;John Schneider,4
+27,8,6,Joe Amabile,Joe Amabile,Joe Amabile,Juan Pablo Di Pace,Joe Amabile;Bobby Bones;Juan Pablo Di Pace;Milo Manheim,4
+27,9,4,,Bobby Bones,Bobby Bones,Evanna Lynch,Bobby Bones;Alexis Ren;Evanna Lynch;Milo Manheim,4
+28,1,12,,Lamar Odom,Lamar Odom,Mary Wilson,Lamar Odom;Sean Spicer;Kate Flannery;Mary Wilson,4
+28,2,12,Mary Wilson,Mary Wilson,Lamar Odom,Mary Wilson,Lamar Odom;Mary Wilson;Ray Lewis;Sean Spicer,4
+28,3,10,,Lamar Odom,Lamar Odom,Lauren Alaina,Lamar Odom;Sean Spicer;Karamo Brown;Lauren Alaina,4
+28,4,10,Lamar Odom,Lamar Odom,Lamar Odom,Sailor Brinkley-Cook,Lamar Odom;Kate Flannery;Sean Spicer;Sailor Brinkley-Cook,4
+28,5,9,,Sean Spicer,Sean Spicer,Sailor Brinkley-Cook,Sean Spicer;Karamo Brown;Lauren Alaina;Sailor Brinkley-Cook,4
+28,6,9,Sailor Brinkley-Cook,Sailor Brinkley-Cook,Sean Spicer,Sailor Brinkley-Cook,Sean Spicer;Hannah Brown;Sailor Brinkley-Cook;Lauren Alaina,4
+28,7,8,Karamo Brown,Karamo Brown,Karamo Brown,Ally Brooke,Karamo Brown;Kate Flannery;Sean Spicer;Ally Brooke,4
+28,8,7,Kate Flannery,Kate Flannery,Sean Spicer,Kate Flannery,Sean Spicer;Kate Flannery;Lauren Alaina;Kel Mitchell,4
+28,9,6,Sean Spicer,Sean Spicer,Sean Spicer,Kel Mitchell,Sean Spicer;Kel Mitchell;Lauren Alaina;James Van Der Beek,4
+28,10,5,James Van Der Beek,James Van Der Beek,James Van Der Beek,Hannah Brown,James Van Der Beek;Lauren Alaina;Hannah Brown;Kel Mitchell,4
+28,11,4,,Lauren Alaina,Lauren Alaina,Ally Brooke,Lauren Alaina;Hannah Brown;Ally Brooke;Kel Mitchell,4
+29,1,15,,Carole Baskin,Carole Baskin,Nelly,Carole Baskin;Charles Oakley;Chrishell Stause;Nelly,4
+29,2,15,Charles Oakley,Charles Oakley,Charles Oakley,Anne Heche,Charles Oakley;Skai Jackson;Carole Baskin;Anne Heche,4
+29,3,14,Carole Baskin,Carole Baskin,Carole Baskin,Skai Jackson,Carole Baskin;Anne Heche;Nelly;Skai Jackson,4
+29,4,13,Anne Heche,Anne Heche,Jeannie Mai,Anne Heche,Anne Heche;Jeannie Mai;Nelly;Jesse Metcalfe,4
+29,5,12,Jesse Metcalfe,Jesse Metcalfe,Jesse Metcalfe,Nelly,Jesse Metcalfe;Chrishell Stause;Veron Davis;Nelly,4
+29,6,11,Veron Davis,Veron Davis,Veron Davis,Chrishell Stause,Veron Davis;Skai Jackson;Johnny Weir;Chrishell Stause,4
+29,7,10,Monica Aldama,Monica Aldama,Kaitlyn Bristowe,Monica Aldama,Monica Aldama;Kaitlyn Bristowe;Jeannie Mai;Chrishell Stause,4
+29,8,8,Chrishell Stause,Chrishell Stause,Nelly,Chrishell Stause,Nelly;Chrishell Stause;AJ McLean;Skai Jackson,4
+29,9,7,AJ McLean,AJ McLean,AJ McLean,Nelly,AJ McLean;Nelly;Justina Machado;Skai Jackson,4
+29,10,6,Johnny Weir,Skai Jackson,Skai Jackson,Nelly,Skai Jackson;Nelly;Johnny Weir;Justina Machado,4
+29,11,4,,Nelly,Nelly,Nev Schulman,Nelly;Justina Machado;Kaitlyn Bristowe;Nev Schulman,4
+30,1,15,,Martin Kove,Martin Kove,Christine Chiu,Martin Kove;Iman Shumpert;Jimmie Allen;Christine Chiu,4
+30,2,15,Martin Kove,Martin Kove,Martin Kove,Christine Chiu,Martin Kove;Matt James;Brian Austin Green;Christine Chiu,4
+30,3,14,Christine Chiu,Christine Chiu,Cody Rigsby,Christine Chiu,Cody Rigsby;Brian Austin Green;Iman Shumpert;Christine Chiu,4
+30,4,13,Brian Austin Green,Brian Austin Green,Matt James,Brian Austin Green,Brian Austin Green;Matt James;Cody Rigsby;Kenya Moore,4
+30,5,11,Melanie C,Melanie C,Iman Shumpert,Melanie C,"Iman Shumpert;Jimmie Allen;Melanie C;Mike ""The Miz"" Mizanin",4
+30,6,10,Kenya Moore,Kenya Moore,Kenya Moore,Jimmie Allen,"Kenya Moore;Mike ""The Miz"" Mizanin;Melora Hardin;Jimmie Allen",4
+30,7,9,"Mike ""The Miz"" Mizanin","Mike ""The Miz"" Mizanin","Mike ""The Miz"" Mizanin",Amanda Kloots,"Mike ""The Miz"" Mizanin;Amanda Kloots;Suni Lee;Iman Shumpert",4
+30,8,8,Jimmie Allen,Jimmie Allen,Jimmie Allen,Iman Shumpert,Jimmie Allen;Iman Shumpert;Olivia Jade;Cody Rigsby,4
+30,9,6,Melora Hardin,Melora Hardin,Melora Hardin,Cody Rigsby,Melora Hardin;Cody Rigsby;Suni Lee;Iman Shumpert,4
+30,10,4,,Cody Rigsby,Cody Rigsby,JoJo Siwa,Cody Rigsby;JoJo Siwa;Iman Shumpert;Amanda Kloots,4
+31,1,16,Jason Lewis,Jason Lewis,Vinny Guadagnino,Jason Lewis,Jason Lewis;Vinny Guadagnino;Teresa Giudice;Jessie James Decker,4
+31,2,15,Teresa Giudice,Teresa Giudice,Cheryl Ladd,Joseph Baena,Cheryl Ladd;Teresa Giudice;Jessie James Decker;Joseph Baena,4
+31,3,14,Cheryl Ladd,Cheryl Ladd,Vinny Guadagnino,Cheryl Ladd,Cheryl Ladd;Vinny Guadagnino;Sam Champion;Jessie James Decker,4
+31,4,13,Sam Champion,Sam Champion,Sam Champion,Daniel Durant,Sam Champion;Joseph Baena;Trevor Donovan;Daniel Durant,4
+31,5,12,Joseph Baena,Joseph Baena,Daniel Durant,Vinny Guadagnino,Daniel Durant;Joseph Baena;Vinny Guadagnino;Jordin Sparks,4
+31,6,10,Jessie James Decker,Jessie James Decker,Jessie James Decker,Jordin Sparks,Jessie James Decker;Vinny Guadagnino;Jordin Sparks;Wayne Brady,4
+31,7,9,Jordin Sparks,Jordin Sparks,Jordin Sparks,Vinny Guadagnino,Jordin Sparks;Vinny Guadagnino;Heidi D'Amelio;Shangela,4
+31,8,8,Heidi D'Amelio,Vinny Guadagnino,Vinny Guadagnino,Trevor Donovan,Vinny Guadagnino;Heidi D'Amelio;Trevor Donovan;Daniel Durant,4
+31,9,6,Daniel Durant,Trevor Donovan,Trevor Donovan,Daniel Durant,Daniel Durant;Trevor Donovan;Shangela;Wayne Brady,4
+31,10,4,,Shangela,Shangela,Charli D'Amelio,Shangela;Wayne Brady;Charli D'Amelio;Gabby Windey,4
+32,1,14,Matt Walsh,Matt Walsh,Matt Walsh,Jamie Lynn Spears,Matt Walsh;Tyson Beckford;Harry Jowsey;Jamie Lynn Spears,4
+32,2,13,Jamie Lynn Spears,Jamie Lynn Spears,Mauricio Umansky,Jamie Lynn Spears,Mauricio Umansky;Adrian Peterson;Jamie Lynn Spears;Harry Jowsey,4
+32,3,12,Tyson Beckford,Tyson Beckford,Tyson Beckford,Alyson Hannigan,Tyson Beckford;Adrian Peterson;Mauricio Umansky;Alyson Hannigan,4
+32,4,11,Adrian Peterson,Adrian Peterson,Alyson Hannigan,Adrian Peterson,Alyson Hannigan;Adrian Peterson;Mauricio Umansky;Barry Williams,4
+32,5,10,Mira Sorvino,Mira Sorvino,Harry Jowsey,Mira Sorvino,Harry Jowsey;Mira Sorvino;Alyson Hannigan;Lele Pons,4
+32,6,9,Mauricio Umansky,Mauricio Umansky,Harry Jowsey,Mauricio Umansky,Harry Jowsey;Mauricio Umansky;Alyson Hannigan;Barry Williams,4
+32,7,8,Lele Pons,Lele Pons,Harry Jowsey,Lele Pons,Harry Jowsey;Barry Williams;Lele Pons;Charity Lawson,4
+32,8,7,Barry Williams,Barry Williams,Harry Jowsey,Jason Mraz,Harry Jowsey;Barry Williams;Jason Mraz;Alyson Hannigan,4
+32,9,6,Harry Jowsey,Harry Jowsey,Harry Jowsey,Xochitl Gomez,Harry Jowsey;Alyson Hannigan;Ariana Madix;Xochitl Gomez,4
+32,10,5,,Alyson Hannigan,Alyson Hannigan,Ariana Madix,Alyson Hannigan;Ariana Madix;Jason Mraz;Charity Lawson,4
+32,11,5,,Alyson Hannigan,Alyson Hannigan,Ariana Madix,Alyson Hannigan;Ariana Madix;Charity Lawson;Jason Mraz,4
+33,1,13,,Eric Roberts,Eric Roberts,Anna Delvey,Eric Roberts;Tori Spelling;Reginald VelJohnson;Anna Delvey,4
+33,2,13,Anna Delvey,Anna Delvey,Anna Delvey,Reginald VelJohnson,Anna Delvey;Eric Roberts;Tori Spelling;Reginald VelJohnson,4
+33,3,11,Eric Roberts,Reginald VelJohnson,Reginald VelJohnson,Phaedra Parks,Reginald VelJohnson;Eric Roberts;Dwight Howard ;Phaedra Parks,4
+33,4,9,Brooks Nader,Brooks Nader,Dwight Howard ,Brooks Nader,Brooks Nader;Dwight Howard ;Phaedra Parks;Chandler Kinney,4
+33,5,8,Phaedra Parks,Phaedra Parks,Phaedra Parks,Dwight Howard ,Phaedra Parks;Stephen Nedoroscik;Dwight Howard ;Jenn Tran,4
+33,6,7,Jenn Tran,Jenn Tran,Stephen Nedoroscik,Jenn Tran,Stephen Nedoroscik;Ilona Maher;Jenn Tran;Danny Amendola,4
+33,7,6,Dwight Howard ,Dwight Howard ,Dwight Howard ,Stephen Nedoroscik,Dwight Howard ;Danny Amendola;Ilona Maher;Stephen Nedoroscik,4
+33,8,5,,Stephen Nedoroscik,Stephen Nedoroscik,Danny Amendola,Stephen Nedoroscik;Ilona Maher;Danny Amendola;Chandler Kinney,4
+33,9,5,,Danny Amendola,Danny Amendola,Chandler Kinney,Danny Amendola;Joey Graziadei;Chandler Kinney;Ilona Maher,4
+34,1,14,,Corey Feldman,Corey Feldman,Baron Davis,Corey Feldman;Andy Richter;Baron Davis;Jordan Chiles,4
+34,2,14,Baron Davis,Corey Feldman,Corey Feldman,Andy Richter,Corey Feldman;Baron Davis;Andy Richter;Scott Hoying,4
+34,3,12,Lauren Jauregui,Lauren Jauregui,Lauren Jauregui,Hilaria Baldwin,Lauren Jauregui;Andy Richter;Jen Affleck;Hilaria Baldwin,4
+34,4,11,Hilaria Baldwin,Hilaria Baldwin,Andy Richter,Hilaria Baldwin,Andy Richter;Danielle Fishel;Hilaria Baldwin;Scott Hoying,4
+34,5,10,,Andy Richter,Danielle Fishel,Andy Richter,Danielle Fishel;Andy Richter;Jen Affleck;Elaine Hendrix,4
+34,6,10,Scott Hoying,Scott Hoying,Scott Hoying,Elaine Hendrix,Scott Hoying;Andy Richter;Jen Affleck;Elaine Hendrix,4
+34,7,9,Jen Affleck,Jen Affleck,Jen Affleck,Andy Richter,Andy Richter;Jen Affleck;Elaine Hendrix;Danielle Fishel,4
+34,8,8,Danielle Fishel,Danielle Fishel,Danielle Fishel,Andy Richter,Andy Richter;Danielle Fishel;Elaine Hendrix;Dylan Efron,4
+34,9,7,Andy Richter,Andy Richter,Andy Richter,Jordan Chiles,Andy Richter;Elaine Hendrix;Dylan Efron;Jordan Chiles,4
+34,10,6,Whitney Leavitt,Whitney Leavitt,Jordan Chiles,Dylan Efron,Jordan Chiles;Whitney Leavitt;Dylan Efron;Elaine Hendrix,4
+34,11,5,,Elaine Hendrix,Elaine Hendrix,Alix Earle,Elaine Hendrix;Dylan Efron;Alix Earle;Jordan Chiles,4
