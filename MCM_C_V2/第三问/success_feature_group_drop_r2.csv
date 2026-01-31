@@ -1,0 +1,5 @@
+﻿target,group,cv_r2,delta_r2_vs_base
+success_score(-placement),baseline,0.07776609568401915,0.0
+success_score(-placement),no_dancer,0.10846015264216313,0.030694056958143978
+success_score(-placement),no_industry,0.07969554180708927,0.001929446123070111
+success_score(-placement),no_age,-0.07841998660309057,-0.15618608228710973
